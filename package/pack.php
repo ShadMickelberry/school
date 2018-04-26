@@ -12,7 +12,7 @@
 
 <?php
 // Copyright 2018 SugarCRM Inc.  Licensed by SugarCRM under the Apache 2.0 license.
-require("../vendor/autoload.php");
+require("vendor/autoload.php");
 
 use Sugarcrm\ProfessorM\PackageGenerator;
 
@@ -23,7 +23,7 @@ use Sugarcrm\ProfessorM\PackageGenerator;
 
 $packageID = "ProfessorM";
 $packageLabel = "Professor M School for Gifted Coders";
-$supportedVersionRegex = '7\\..*$';
+$supportedVersionRegex = '(8\..*|7\.(9|10|11)\..*)';
 
 /*
  * Determine the version of the zip
@@ -209,7 +209,7 @@ $installdefs = array(
                     'default_value' => 'active',
                     'date_modified' => '2018-02-01 21:32:16',
                     'deleted' => '0',
-                    'audited' => '0',
+                    'audited' => '1',
                     'mass_update' => '1',
                     'duplicate_merge' => '1',
                     'reportable' => '1',
